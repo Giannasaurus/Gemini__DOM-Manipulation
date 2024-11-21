@@ -12,10 +12,14 @@ HTML Structure:
 </body>
 </html> */
 
+
+
 ***
 const button=document.getElementById(myButton);
 button.textContent="Button clicked!";
 ***
+
+
 
 /*
 # Function Declaration
