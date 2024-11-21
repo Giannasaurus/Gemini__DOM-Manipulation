@@ -16,3 +16,13 @@ HTML Structure:
 const button=document.getElementById(myButton);
 button.textContent="Button clicked!";
 ***
+
+# Function Declaration
+<button onlick="function()">Text</button>
+
+const function() {
+}
+
+# Event Listener
+const button = document.getElementById("myButton");
+button.addEventListener("click", myFunction);
