@@ -1,0 +1,41 @@
+/* Create a function that takes an array of objects as input. Each object should have properties like className, id, and textContent. Dynamically create elements based on the object properties, set their attributes, and append them to a specified container element.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic Element Creation with Attributes</title>
+</head>
+<body>
+  <div id="container"></div>
+  <script src="script.js"></script>
+</body>
+</html> */
+
+/*
+Hints:
+Use a loop to iterate through the array of objects.
+Create an element based on the tagName property of the object (e.g., div, p, span).
+Set attributes like className, id, and textContent using the corresponding properties of the object.
+Append the created element to the specified container element. */
+
+
+
+***
+const elementsData = [
+  { tagName: "div", className: "my-div", id: "div1", textContent: "Hello" },
+  { tagName: "p", className: "my-paragraph", textContent: "This is a paragraph" }
+];
+
+function createElements(elementsData) {
+  const container = document.getElementById("container");
+  for (let i = 0; i < elementsData.length; i++) {
+    const element = document.createElement(elementsData[i].tagName);
+    element.className = elementsData[i].className;
+    element.id = elementsData[i].id;
+    element.textContent = elementsData[i].textContent;
+    container.appendChild(element);
+  }
+}
+
+createElements(elementsData);
+***
