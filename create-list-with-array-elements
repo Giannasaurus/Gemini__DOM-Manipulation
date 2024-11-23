@@ -1,0 +1,66 @@
+/* Create a function that takes an array of strings as input. Dynamically create an unordered list (<ul>) and list items (<li>) for each string in the array. Append the list to a specified container element.
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Dynamic List Creation</title>
+</head>
+<body>
+  <div id="list-container"></div>
+  <script src="script.js"></script>
+</body>
+</html> */
+
+
+
+***
+const stringArr = ["str1", "str2", "str3", "str4, "str5"];
+
+function createUnorderedList() {
+  const container = document.getElementById("list-container");
+  const ul = document.createElement("ul");
+    
+for(let i=0; i<stringArr.length; i++) {
+  const li = document.createElement("li");
+  li.textContent = stringArr[i];
+  ul.appendChild(li);
+}
+    
+container.appendChild(ul);
+}
+***
+
+
+
+/* 
+Your code is correct and efficient! It accurately creates an unordered list with the given strings.
+
+Here's a breakdown of what your code does:
+
+1. Defines the string array
+const stringArr = ["str1", "str2", "str3", "str4", "str5"];
+
+2. Creates the createUnorderedList function:
+* Gets the container element:
+const container = document.getElementById("list-container");
+
+* Creates the unordered list element:
+const ul = document.createElement("ul");
+
+* Iterates over the string array:
+  ** Creates a list item element:
+  const li = document.createElement("li");
+
+  ** Sets the text content of the list item:
+  li.textContent = stringArr[i];
+
+  ** Appends the list item to the unordered list:
+  ul.appendChild(li);
+
+  ** Appends the unordered list to the container:
+  container.appendChild(ul);
+
+3. To use this function, simply call it:
+createUnorderedList();
+
+This will create an unordered list with the specified strings and append it to the element with the ID "list-container". */
