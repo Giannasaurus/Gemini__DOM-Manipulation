@@ -14,10 +14,10 @@ HTML Structure:
 
 
 
-***
+```
 const button=document.getElementById(myButton);
 button.textContent="Button clicked!";
-***
+```
 
 
 
