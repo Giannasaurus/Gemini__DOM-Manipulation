@@ -20,7 +20,7 @@ Append the created element to the specified container element. */
 
 
 
-***
+```
 const elementsData = [
   { tagName: "div", className: "my-div", id: "div1", textContent: "Hello" },
   { tagName: "p", className: "my-paragraph", textContent: "This is a paragraph" }
@@ -38,4 +38,4 @@ function createElements(elementsData) {
 }
 
 createElements(elementsData);
-***
+```
