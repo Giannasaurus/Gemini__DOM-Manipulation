@@ -20,7 +20,7 @@ Append the created <p> elements to the specified container element. */
 
 
 
-***
+```
 const pContent = ["this", "is", "a", "paragraph", "content"];
 
 function appendStringToP() {
@@ -31,7 +31,7 @@ function appendStringToP() {
   }
 }
 appendStringToP();
-***
+```
 
 
 
