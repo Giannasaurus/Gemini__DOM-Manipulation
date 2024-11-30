@@ -39,27 +39,20 @@ Here's a breakdown of what your code does:
 
 1. Defines the string array
 const stringArr = ["str1", "str2", "str3", "str4", "str5"];
-
 2. Creates the createUnorderedList function:
-* Gets the container element:
+  * Gets the container element:
 const container = document.getElementById("list-container");
-
-* Creates the unordered list element:
+  * Creates the unordered list element:
 const ul = document.createElement("ul");
-
-* Iterates over the string array:
+  * Iterates over the string array:
   ** Creates a list item element:
   const li = document.createElement("li");
-
   ** Sets the text content of the list item:
   li.textContent = stringArr[i];
-
   ** Appends the list item to the unordered list:
   ul.appendChild(li);
-
   ** Appends the unordered list to the container:
   container.appendChild(ul);
-
 3. To use this function, simply call it:
 createUnorderedList();
 
