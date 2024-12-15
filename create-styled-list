@@ -1,71 +1,57 @@
-/* 
-Create a function that takes an array of strings as input. Dynamically create an unordered list with each string as a list item. Style the list items with a specific font-size, color, and background color.
-
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Styled List</title>
-  <style>
-    .list-item {
-      font-size: 18px;
-      color: blue;
-      background-color: lightgray;
-      padding: 10px;
-    }
-  </style>
-</head>
-<body>
-  <div id="list-container"></div>
-  <script src="script.js"></script>
-</body>
-</html> */
+  <head>
+    <title>Styled List</title>
+    <style>
+      .list-item {
+        font-size: 18px;
+        color: blue;
+        background-color: lightgray;
+        padding: 10px;
+      }
+    </style>
+  </head>
+  <body>
+    <!--Create a function that takes an array of strings as input. Dynamically create an unordered list with each string as a list item. Style the list items with a specific font-size, color, and background color.-->
+    <div id="list-container"></div>
+    <script src="script.js">
+          const stringList = ["apple", "orange", "banana", "mango", "grapes"];
 
+      function createStyledList() {
+        const ul = document.createElement("ul");
+        const container = document.getElementById(list-container);
 
-
-```
-const stringList = ["apple", "orange", "banana", "mango", "grapes"];
-
-function createStyledList() {
-  const ul = document.createElement("ul");
-  const container = document.getElementById(list-container);
-
-for(let i=0; i<stringList.length; i++) {
-  const li = document.createElement("li");
-  li.textContent = stringList[i];
-  li.classList.add("list-item");
-  ul.appendChild(li);
-}
-
-container.appendChild(ul);
-}
-
-createdStyledList();
-```
-
-
-
-/*
-Your code is correct and efficient! It accurately creates a styled unordered list with the given strings.
-
-Here's a breakdown of what your code does:
-  
-1. Defines the string array:
+        for(let i=0; i<stringList.length; i++) {
+            const li = document.createElement("li");
+            li.textContent = stringList[i];
+            li.classList.add("list-item");
+            ul.appendChild(li);
+        }
+        container.appendChild(ul);
+        }
+        createdStyledList();
+    </script>
+    <!--Your code is correct and efficient! It accurately creates a styled unordered list with the given strings.
+    Here's a breakdown of what your code does:
+    1. Defines the string array:
     const stringList = ["apple", "orange", "banana", "mango", "grapes"];
-2. Creates the createStyledList function:
-  - Gets the container element:
-    const container = document.getElementById("list-container");
-  - Creates the unordered list element:
-     const ul = document.createElement("ul");
-  - Iterates over the string array:
-  -- Creates a list item element:
-      const li = document.createElement("li");
-  -- Sets the text content of the list item:
-      li.textContent = stringList[i];
-  -- Adds the "list-item" class to the list item:
-      li.classList.add("list-item");
-  -- Appends the list item to the unordered list:
-      ul.appendChild(li);
-  -- Appends the unordered list to the container:
-      container.appendChild(ul);
-3. Calls the function to create the list:
-    createStyledList();
+    2. Creates the createStyledList function:
+    - Gets the container element:
+        const container = document.getElementById("list-container");
+    - Creates the unordered list element:
+        const ul = document.createElement("ul");
+    - Iterates over the string array:
+    -- Creates a list item element:
+        const li = document.createElement("li");
+    -- Sets the text content of the list item:
+        li.textContent = stringList[i];
+    -- Adds the "list-item" class to the list item:
+        li.classList.add("list-item");
+    -- Appends the list item to the unordered list:
+        ul.appendChild(li);
+    -- Appends the unordered list to the container:
+        container.appendChild(ul);
+    3. Calls the function to create the list:
+        createStyledList();-->
+  </body>
+</html>
