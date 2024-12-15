@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Form with Validation</title>
+  </head>
+  <body>
+    <!---Create a dynamic form with input fields for name, email, and message. Validate the form fields to ensure that the email is valid and the message is not empty. Display an error message if the validation fails.
+    Hints:
+
+- Create a form element.
+- Create input fields for name, email, and message.
+- Add a submit button.
+- Add an event listener to the form's submit event.
+- Validate the email format using a regular expression.
+- Check if the message field is empty.
+- Display an error message if validation fails.
+- Prevent form submission if validation fails.
+    
+Bonus:
+- Style the form and error messages.
+- Implement additional validation rules (e.g., minimum message length, password strength).
+- Submit the form data using AJAX.-->
+    <div id="form-container"></div>
+    <script src="script.js">
+      // (tinamad na :skull:)
+
+      function createForm() {
+          const container = document.getElementById("form-container");
+          const form = document.createElement("form");
+
+      // name
+          const label = document.createElement("label");
+          label.setAttribute("for", "name");
+          label.textContext = "Name";
+          const name = document.createElement("input");
+          name.setAttribute("type", "text");
+          name.setAttribute("id", "name");
+          name.setAttribute("required", "");
+
+      // email
+          const label = document.createElement("label");
+          label.for = "email";
+          label.textContent = "Email";
+          const email = document.createElement("input");
+          email.type = "email";
+          email.id = "email";
+          email.required = true;
+
+      // message
+          const label = document.createElement("label");
+          label.setAttribute("for", "message");
+          label.textContent = "Message";
+          const message = document.createElement("input");
+          message.setAttribute("type", "text");
+          message.setAttribute("id", "message");
+          message.setAttribute("required", "");
+
+      // button
+          const submit = document.createElement("button");
+          submit.type = "submit";
+
+      // styles
+          name.style.color="white";
+          name.style.backgroundColor="#262626";
+          name.style.padding="1em";
+          email.style.color="white";
+          email.style.backgroundColor="#262626";
+          email.style.padding="1em";
+          message.style.color="white";
+          message.style.backgroundColor="#262626";
+          message.style.padding="1em";
+      }
+    </script>
+    <!--The code you provided is a good start for creating the form structure with basic styling.
+    Here's how to add validation and error handling:
+
+    function createForm() {
+      const container = document.getElementById("form-container");
+      const form = document.createElement("form");
+    
+      // Name
+      const nameLabel = document.createElement("label");
+      nameLabel.setAttribute("for", "name");
+      nameLabel.textContent = "Name";
+      const nameInput = document.createElement("input");
+      nameInput.setAttribute("type",   
+     "text");
+      nameInput.setAttribute("id", "name");
+      nameInput.setAttribute("required",   
+     "");
+    
+      // Email
+      const emailLabel = document.createElement("label");
+      emailLabel.setAttribute("for", "email");
+      emailLabel.textContent = "Email";
+      const emailInput = document.createElement("input");
+      emailInput.setAttribute("type",   
+     "email");
+      emailInput.setAttribute("id", "email");
+      emailInput.setAttribute("required",   
+     "");
+    
+      // Message
+      const messageLabel = document.createElement("label");
+      messageLabel.setAttribute("for", "message");
+      messageLabel.textContent = "Message";
+      const messageInput = document.createElement("input");   
+    
+      messageInput.setAttribute("type", "text");
+      messageInput.setAttribute("id", "message");
+      messageInput.setAttribute("required",   
+     "");
+    
+      // Error message container
+      const errorMessage = document.createElement("p");
+      errorMessage.style.color = "red";
+      errorMessage.style.display = "none"; // Initially hide the error message
+    
+      // Submit button
+      const submitButton = document.createElement("button");
+      submitButton.type = "submit";
+      submitButton.textContent = "Submit";   
+    
+    
+      // Add event listener to form submission
+      form.addEventListener("submit", function(event) {
+        event.preventDefault(); // Prevent default form submission   
+    
+    
+        const email = emailInput.value;
+        const message = messageInput.value;
+        let isValid = true;
+        errorMessage.textContent = ""; // Clear previous errors
+    
+        // Email validation
+        const emailRegex = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (!emailRegex.test(email)) {
+          errorMessage.textContent += "Invalid email format. ";
+          isValid = false;
+        }
+    
+        // Message validation (check if empty)
+        if (message === "") {
+          errorMessage.textContent += "Message cannot be empty. ";
+          isValid = false;
+        }
+    
+        if (!isValid) {
+          errorMessage.style.display = "block"; // Show the error message
+        } else {
+          // Form validation successful (you can submit the data here)
+          console.log("Form submitted successfully!");
+          // Implement logic to handle form data submission (e.g., AJAX request)
+        }
+      });
+    
+      // Add form elements to the form and container
+      form.appendChild(nameLabel);
+      form.appendChild(nameInput);
+      form.appendChild(emailLabel);
+      form.appendChild(emailInput);
+      form.appendChild(messageLabel);
+      form.appendChild(messageInput);   
+    
+      form.appendChild(errorMessage);
+      form.appendChild(submitButton);
+    
+      container.appendChild(form);
+    
+      // Styles (optional, customize as needed)
+      nameInput.style.color = "white";
+      nameInput.style.backgroundColor = "#262626";
+      nameInput.style.padding = "1em";
+      emailInput.style.color = "white";
+      emailInput.style.backgroundColor = "#262626";
+      emailInput.style.padding = "1em";
+      messageInput.style.color = "white";
+      messageInput.style.backgroundColor = "#262626";
+      messageInput.style.padding = "1em";
+    }
+    
+    createForm(); */
+    
+    Explanation of changes:
+    - Error message element: Added a p element to display error messages.
+    - Event listener on submit: Added an event listener to the submit event of the form.
+    - Prevent default submission: Inside the event listener, we use event.preventDefault() to prevent the default form submission behavior.-->
+  </body>
+</html>
