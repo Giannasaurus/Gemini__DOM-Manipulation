@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dynamic Element Creation</title>
+  </head>
+  <body>
+    <!--Create a function that takes a number as input and dynamically generates that number of <div> elements with unique IDs (e.g., "div1", "div2", etc.). Append these elements to the body of the HTML document-->
+    <script src="script.js">
+      function addNewDivs(number) {
+        for (let i = 1; i <= number; i++) {
+            const div = document.createElement("div");
+            div.id = `div${i}`;
+            document.body.appendChild(div);
+        }
+        addNewDivs(5);
+      }
+    </script>
+    <!--Explanation:
+    1. Loop:
+        The loop now iterates from 1 to number, creating the correct number of divs.
+    2. Div Creation:
+        const div = document.createElemen ("div"); creates a new <div> element.
+    3. ID Setting:
+        div.id = div${i}; sets the ID of the div to a unique value like "div1", "div2", etc.
+    4. Appending:
+        document.body.appendChild(div); appends the created div to the body-->
+  </body>
+</html>
+</div>
