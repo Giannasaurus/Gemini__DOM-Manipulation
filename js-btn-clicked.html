@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM Manipulation Challenge</title>
+  </head>
+  <body>
+    <!--Create a simple HTML page with a button. When the button is clicked, use JavaScript to access the DOM and change the text content of the button to "Button clicked!".-->
+    <button id="myButton">Click me</button>
+    <script src="script.js">
+        const button=document.getElementById(myButton);
+        button.textContent="Button clicked!";
+    </script>
+    <!--Other alternatives:
+    # Function Declaration
+    <button onlick="function()">Text</button>
+    const function() {
+    }
+    # Event Listener
+    const button = document.getElementById("myButton");
+    button.addEventListener("click", myFunction);-->
+  </body>
+</html>
